@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'lab.solupia'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+bootJar{
+    enabled = false
+}
+
+jar{
+    enabled = true
+}
+
+dependencies {
+    runtimeOnly('org.mariadb.jdbc:mariadb-java-client:2.4.2')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
