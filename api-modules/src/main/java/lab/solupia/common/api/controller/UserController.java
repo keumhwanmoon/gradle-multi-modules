@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 public class UserController {
-    @GetMapping("/api/users")
+    @GetMapping("/api/user")
     public List<UserDTO> getUsers() {
         UserDTO user1 = new UserDTO();
 

@@ -77,6 +77,13 @@ project(':api-modules') {
 
 project(':web-modules') {
     dependencies {
+        compile project(':system-modules')
+    }
+}
+
+project(':system-modules') {
+    dependencies {
         compile project(':api-modules')
+        compile project(':common-modules')
     }
 }
